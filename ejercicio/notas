@@ -1,0 +1,27 @@
+Explicación del código:
+Elemento 1 (Posición Estática):
+
+position: static es el valor por defecto. Los elementos con esta propiedad se colocan en el flujo normal del documento. No se les aplica ninguna transformación adicional y afectan el comportamiento de los demás elementos (es decir, siguen la secuencia de apilamiento en el documento).
+Efecto: El Elemento 1 no se mueve ni se ajusta a otras posiciones, y ocupa su lugar de acuerdo con el flujo de contenido del HTML.
+Elemento 2 (Posición Relativa):
+
+position: relative permite que el elemento se desplace en relación con su posición original en el flujo del documento. El top: 30px y left: 50px lo desplazan desde su posición original.
+Efecto: A pesar de moverse, el espacio original que ocupaba sigue siendo reservado, lo que significa que los otros elementos no se reubican para llenar el espacio vacío que deja.
+Elemento 3 (Posición Absoluta):
+
+position: absolute coloca al Elemento 3 fuera del flujo normal del documento, y se posiciona respecto al contenedor más cercano que tenga position: relative (en este caso, el contenedor .contenedor).
+Efecto: El Elemento 3 se coloca en las coordenadas top: 50px y left: 250px dentro del contenedor, y no ocupa espacio en el flujo normal del documento, lo que significa que no afecta a los otros elementos ni les deja espacio en su lugar.
+Elemento 4 (Posición Fija):
+
+position: fixed significa que el Elemento 4 se posicionará respecto a la ventana del navegador, no a su contenedor.
+Efecto: El Elemento 4 se quedará fijado en la esquina inferior derecha de la pantalla, incluso cuando se haga scroll. No se moverá de esa posición, independientemente de cuánto se desplace la página.
+Respuestas a las preguntas:
+¿Qué sucede si cambias la propiedad top en el Elemento 2? ¿Cómo afecta su posición?
+
+Si se cambia top en el Elemento 2, el elemento se moverá hacia abajo o hacia arriba, dependiendo del valor asignado. Como Elemento 2 está posicionado relativamente, cambiar top desplazará al elemento desde su ubicación inicial, pero el espacio que ocupa sigue siendo el mismo.
+¿Qué pasa si agregas más contenido en la página? ¿Cómo cambia el comportamiento de los elementos con position: fixed?
+
+El comportamiento del Elemento 4 con position: fixed no cambiará. A pesar de que agregues más contenido y hagas scroll, el Elemento 4 siempre se mantendrá fijo en la parte inferior derecha de la ventana del navegador.
+Si quitas el position: relative del Elemento 2, ¿cómo cambia su comportamiento?
+
+Si se quita position: relative, el Elemento 2 volverá a su comportamiento predeterminado de position: static. En este caso, se posicionará en el flujo normal del documento, sin moverse hacia abajo ni hacia la derecha. Esto significa que el Elemento 2 se alineará con los otros elementos en su posición original, y ya no se desplazará.

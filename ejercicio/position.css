@@ -1,0 +1,57 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor */
+.contenedor {
+  position: relative; /* Contenedor con posición relativa para que los elementos posicionados absolutamente se ubiquen dentro de él */
+  width: 100%;
+  height: 500px;
+  border: 5px solid #000;
+  padding: 20px;
+  background-color: #f3f3f3;    
+}
+
+/* Elemento 1: posición estática (default) */
+.elemento1 {
+  background-color: #FFCC00;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* Este elemento no tiene ninguna propiedad `position`, por lo que es estático por defecto. */
+  /* En el flujo normal, se coloca en su posición original y afecta a los demás elementos en el contenedor. */
+}
+
+/* Elemento 2: posición relativa */
+.elemento2 {
+  position: relative; /* El elemento se mueve en relación a su posición original. */
+  top: 30px; /* Mueve el elemento 30px hacia abajo desde su ubicación inicial. */
+  left: 50px; /* Mueve el elemento 50px hacia la derecha desde su ubicación inicial. */
+  background-color: #00FF00;
+  padding: 20px;
+  /* A pesar de moverse, el espacio que ocupaba inicialmente sigue reservado en el flujo del documento. */
+}
+
+/* Elemento 3: posición absoluta */
+.elemento3 {
+  position: absolute; /* El elemento se posiciona con respecto al contenedor más cercano con posición relativa. */
+  top: 50px; /* Mueve el elemento 50px hacia abajo desde el borde superior del contenedor. */
+  left: 250px; /* Mueve el elemento 250px hacia la derecha desde el borde izquierdo del contenedor. */
+  background-color: #00CCFF;
+  padding: 20px;
+  /* Este elemento se saca del flujo normal, por lo que no ocupa espacio en el contenedor ni afecta a los demás elementos. */
+  /* Se posiciona "fuera de flujo" basado en las coordenadas del contenedor. */
+}
+
+/* Elemento 4: posición fija */
+.elemento4 {
+  position: fixed; /* El elemento se fija en la pantalla y no se mueve al hacer scroll. */
+  bottom: 20px; /* El elemento se coloca a 20px desde la parte inferior de la ventana del navegador. */
+  right: 20px; /* El elemento se coloca a 20px desde la parte derecha de la ventana del navegador. */
+  background-color: #FF0066;
+  padding: 20px;
+  /* Este elemento siempre estará visible en la pantalla, sin importar el desplazamiento por el scroll. */
+  /* No se mueve ni afecta a otros elementos cuando se hace scroll. */
+}
