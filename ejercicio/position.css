@@ -7,7 +7,7 @@
 
 /* Contenedor */
 .contenedor {
-  position: relative; /* Contenedor con posición relativa para que los elementos posicionados absolutamente se ubiquen dentro de él */
+  position: relative; 
   width: 100%;
   height: 500px;
   border: 5px solid #000;
@@ -24,27 +24,27 @@
 
 /* Elemento 2: posición relativa */
 .elemento2 {
-  position: ; /* El elemento se mueve en relación a su posición original. */
-  __________ /* Mueve el elemento 30px hacia abajo desde su ubicación inicial. */
-  __________/* Mueve el elemento 50px hacia la derecha desde su ubicación inicial. */
+  position: relative; 
+  top: 30px; 
+  left: 50px; 
   background-color: #00FF00;
-  padding: 20px;
+  padding:20px;
 }
 
 /* Elemento 3: posición absoluta */
 .elemento3 {
   position: absolute; 
-  ___________/* Mueve el elemento 50px hacia abajo desde el borde superior del contenedor. */
-  _________ /* Mueve el elemento 250px hacia la derecha desde el borde izquierdo del contenedor. */
+  top: 50px;
+  right: 250px;
   background-color: #00CCFF;
   padding: 20px;
 }
 
 /* Elemento 4: posición fija */
 .elemento4 {
-  position: ____ /* El elemento se fija en la pantalla y no se mueve al hacer scroll. */
-  _____________/* El elemento se coloca a 20px desde la parte inferior de la ventana del navegador. */
-  ____________/* El elemento se coloca a 20px desde la parte derecha de la ventana del navegador. */
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
   background-color: #FF0066;
   padding: 20px;
 }
